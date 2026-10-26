@@ -50,13 +50,13 @@ h1 span{display:block;font-size:clamp(22px,3.4vw,46px);letter-spacing:.3em;color
 .facts span+span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--mut);margin:0 16px;opacity:.6}
 .facts b{color:var(--text);font-weight:600;margin-right:6px}
 /* редакционные разделы */
-.ed{display:grid;grid-template-columns:4fr 8fr;gap:40px;padding:72px 0;border-bottom:1px solid var(--line)}
-.ed__side{position:sticky;top:130px;align-self:start}
-.ed__side .n{display:block;font:400 13px var(--font);letter-spacing:.2em;color:var(--mut);margin-bottom:18px}
-.ed__side h2{font-size:clamp(28px,3.6vw,46px);line-height:1.05}
+.ed{display:block;padding:72px 0;border-bottom:1px solid var(--line)}
+.ed__side{display:grid;grid-template-columns:1fr auto;gap:8px 40px;align-items:end;margin-bottom:34px}
+.ed__side .n{grid-column:1/-1;display:block;font:400 13px var(--font);letter-spacing:.2em;color:var(--mut);margin-bottom:6px}
+.ed__side h2{font-size:clamp(30px,4.2vw,56px);line-height:1.02}
 .ed__side h2 em{font-style:normal;color:var(--mut)}
-.ed__side p{margin-top:18px;font-size:14px;max-width:320px}
-.ed__body p{font-size:16px;max-width:720px}
+.ed__side p{margin:0 0 6px;font-size:14px;max-width:300px;text-align:right}
+.ed__body{max-width:900px}.ed__body p{font-size:16px;max-width:760px}
 .ed__body p.big{font-size:clamp(19px,1.8vw,24px);line-height:1.5;color:var(--text);margin-bottom:26px}
 .ed__body ul{list-style:none;padding:0;margin:0 0 22px}
 .ed__body li{padding:16px 0;border-top:1px solid var(--line);color:var(--mut);display:grid;grid-template-columns:40px 1fr;gap:16px}
@@ -148,7 +148,7 @@ h1 span{color:var(--blue);text-shadow:0 0 30px rgba(37,137,255,.35)}
 .final h2 span{color:var(--sky)}
 .age{border-color:rgba(37,137,255,.45)}
 .ed__body{min-width:0}
-@media(max-width:1000px){.ed{grid-template-columns:1fr;gap:26px;padding:56px 0}.ed__side{position:static}.hero__grid{grid-template-columns:1fr}.hero__art{min-height:380px}.hero__art img{right:-10%;bottom:-40px;width:min(520px,110%)}.hero__ghost{display:none}}
+@media(max-width:1000px){.ed{padding:56px 0}.ed__side{grid-template-columns:1fr;margin-bottom:24px}.ed__side p{text-align:left;max-width:none}.hero__grid{grid-template-columns:1fr}.hero__art{min-height:380px}.hero__art img{right:-10%;bottom:-40px;width:min(520px,110%)}.hero__ghost{display:none}}
 @media(max-width:800px){
   .top .wrap{height:64px}.top nav,.top .acts .btn-o{display:none}
   .live .tg{display:none}
@@ -163,7 +163,6 @@ h1 span{color:var(--blue);text-shadow:0 0 30px rgba(37,137,255,.35)}
   footer .wrap{grid-template-columns:1fr;text-align:center;justify-items:center}
   .sticky{display:flex}
 
-  .ed{grid-template-columns:minmax(0,1fr)}
   .live span{display:none}.live a::before{content:"Рабочий адрес: ";color:var(--mut);font-weight:400}
   .addr{flex-wrap:wrap;border-radius:18px;padding:12px 14px}.addr .u{flex:1 1 100%}.addr .btn{margin-left:auto}
 }
