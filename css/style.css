@@ -50,7 +50,7 @@ h1 span{display:block;font-size:clamp(22px,3.4vw,46px);letter-spacing:.3em;color
 .facts span+span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--mut);margin:0 16px;opacity:.6}
 .facts b{color:var(--text);font-weight:600;margin-right:6px}
 /* редакционные разделы */
-.ed{display:block;padding:72px 0;border-bottom:1px solid var(--line)}
+.ed{display:block;width:min(1240px,calc(100% - 48px));margin:0 auto;padding:72px 0;border-bottom:1px solid var(--line)}
 .ed__side{display:grid;grid-template-columns:1fr auto;gap:8px 40px;align-items:end;margin-bottom:34px}
 .ed__side .n{grid-column:1/-1;display:block;font:400 13px var(--font);letter-spacing:.2em;color:var(--mut);margin-bottom:6px}
 .ed__side h2{font-size:clamp(30px,4.2vw,56px);line-height:1.02}
